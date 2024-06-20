@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log(data);
             // Mostrar un mensaje de éxito
             mostrarMensajeExito();
+            form.reset();
         })
         .catch(error => {
             console.error('Error:', error);
