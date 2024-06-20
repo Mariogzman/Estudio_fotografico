@@ -131,6 +131,7 @@ td {
 .header-txt {
     flex-basis: 50%;
     text-align: center;
+    color: #111;
 }
 
 .header-txt h1 {
@@ -141,6 +142,12 @@ td {
     font-family: 'Oswald', sans-serif;
     margin-bottom: 15px;
 }
+
+h2 {
+    font-size: 5em; /* Tamaño del texto más grande */
+    margin: 0;
+    text-align: center; /* Centra el texto horizontalmente */
+    }
 
 .header-txt p {
     font-size: 20px;
@@ -201,8 +208,12 @@ td {
     font-size: 15px;
 }
 
-.products {
+.products-wrapper {
+    background-color: #ffffff;
     padding: 50px;
+}
+
+.products {
     text-align: center;
 }
 
@@ -215,46 +226,81 @@ td {
 }
 
 .product-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap : 50px
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
 }
 
-.product {
+.product,
+.product4 {
     text-align: center;
     padding: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 300px; /* Ancho fijo para cada producto */
+    margin-bottom: 50px; /* Espacio entre productos */
+    display: flex;
+    flex-direction: column; /* Para que el contenido se apile verticalmente */
+    align-items: center; /* Centrar elementos horizontalmente */
 }
 
-.product img {
+.product img,
+.product4 img {
     width: 250px;
     height: 370px;
     margin-bottom: 20px;
+    border-radius: 8px;
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
 }
 
-.product h3 {
-    font-size: 20px;
+.product h3,
+.product4 h3 {
+    font-size: 24px;
     color: #111111;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
 
-.product p, .precio {
-    font-size: 16px;
-    color: #111111;
+.product p,
+.product4 p,
+.precio {
+    font-size: 18px;
+    color: #333333;
     margin-bottom: 15px;
 }
 
-.precio {
+.product4 .precio {
     font-weight: 800;
+    color: #111;
 }
+
+.Agregar-carrito {
+    padding: 10px 20px;
+    background-color: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.Agregar-carrito:hover {
+    background-color: #111;
+}
+
 
 .icons {
     padding: 50px 0 100px 0;
     display: flex;
     justify-content: space-between;
 }
+
+.icon-img img {
+    width: 75px; /* Ajusta el ancho de la imagen del icono */
+    height: auto; /* Altura automática para mantener la proporción */
+    }
 
 .icon-1 {
     flex-basis: calc(33.5% - 30px);
@@ -282,6 +328,48 @@ td {
     justify-content: space-between;
     padding-bottom: 100px;
 }
+
+.titulo-experiencias {
+    text-align: center; /* Centra el texto horizontalmente */
+    color: #111; /* Color del texto */
+    font-family: 'Oswald', sans-serif; /* Tipo de fuente */
+    font-size: 36px; /* Tamaño de fuente */
+    margin-bottom: 30px; /* Espacio inferior */
+}
+
+.blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 50px 0; /* Espaciado interno */
+}
+
+.blog-1 {
+    text-align: center; /* Alineación del contenido al centro */
+    max-width: 300px; /* Ancho máximo del contenedor de cada blog */
+}
+
+.blog-1 img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 8px; /* Borde redondeado para las imágenes */
+}
+
+.blog-1 h3 {
+    font-size: 24px; /* Tamaño de fuente del título */
+    color: #333333; /* Color del texto del título */
+    margin-top: 20px; /* Espacio superior del título */
+    margin-bottom: 10px; /* Espacio inferior del título */
+}
+
+.blog-1 p {
+    font-size: 18px; /* Tamaño de fuente del párrafo */
+    color: #666666; /* Color del texto del párrafo */
+    line-height: 1.6; /* Altura de línea del párrafo */
+    margin-bottom: 20px; /* Espacio inferior del párrafo */
+}
+
 
 .blog-1 {
     flex-basis: calc(33.3% - 30px);
